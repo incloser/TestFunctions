@@ -12,14 +12,14 @@ public class Random {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in, "866"));
         Random random = new Random();
         while (true) {
             if (reader.readLine().equals("ГО")) {
                 System.out.println(random.randomDigital());
                 break;
             } else {
-                System.out.println("Просто наипиши две буквы: ГО");
+                System.out.println("Просто напиши две буквы: ГО");
             }
         }
         reader.close();
