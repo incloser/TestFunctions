@@ -1,5 +1,5 @@
 import org.junit.*;
-import package1.TestMethods;
+import baseHelpers.TestMethods;
 
 import static org.junit.Assert.assertEquals;
 

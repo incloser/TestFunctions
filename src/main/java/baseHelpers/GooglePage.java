@@ -1,11 +1,10 @@
-package package1;
+package baseHelpers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class GooglePage {
+public class GooglePage extends BasePage {
 
     @FindBy (css = "input[value=\"Мне повезёт!\"]")
     private WebElement luckyMe;
@@ -14,7 +13,11 @@ public class GooglePage {
     private WebElement title;
 
     public GooglePage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
+        super(driver);
+    }
+
+    public void visit() {
+        open("https://www.google.com");
     }
 
     public WebElement getLuckyMe() {
