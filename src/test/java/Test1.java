@@ -1,9 +1,9 @@
 import org.junit.*;
-import package1.New;
+import package1.TestMethods;
 
 import static org.junit.Assert.assertEquals;
 
-public class Test1{
+public class Test1 {
     @BeforeClass
     public static void mainSetUp() {
         System.out.println("Начало всех тестов.");
@@ -15,8 +15,8 @@ public class Test1{
     }
 
     @Test(timeout = 1000)
-    public void testRandomConstructor() {
-        New test = new New();
+    public void testAdding() {
+        TestMethods test = new TestMethods();
         try {
             assertEquals(3, test.add(1, 2));
             System.out.println("Сложение работает верно.");
