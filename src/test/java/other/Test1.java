@@ -1,3 +1,5 @@
+package other;
+
 import org.junit.*;
 import baseHelpers.TestMethods;
 
