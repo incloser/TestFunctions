@@ -18,16 +18,18 @@ public class Test3 extends BaseTest {
 
     @Test
     public void testGooglePage() {
+        GooglePage page = new GooglePage(driver);
         try {
-            GooglePage page = new GooglePage(driver);
             page.visit();
             page.getLucky().click();
             //Waiting for Doodle page appears(by archive-link)
-            wait.until(visibilityOfElementLocated(By.xpath(".//*[@id='archive-link']/a")));
+            wait.until(visibilityOfElementLocated(By.xpath(".//*[@id='archive']")));
             assertTrue("Страница Дудлы Google не открылась", page.getTitle().getText().equals("Дудлы Google"));
         } catch (Exception e) {
             fail();
             e.printStackTrace();
         }
+        System.out.println(page.getWebDriver().getCurrentUrl() + " was opened.");
+        page.getScreenshot();
     }
 }

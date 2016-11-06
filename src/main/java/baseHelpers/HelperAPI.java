@@ -1,8 +1,10 @@
 package baseHelpers;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Main helper
@@ -16,10 +18,22 @@ public abstract class HelperAPI {
     public abstract WebDriver getWebDriver();
 
     /**
-     * @param url Web page address
+     * @param url Web page opening by URL
      */
     void open(String url) {
         getWebDriver().get(url);
+    }
+
+    /**
+     * Taking screenshot method
+     */
+    public void getScreenshot() {
+        File screenshot = ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(screenshot, new File("F:\\screenshots\\1.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
