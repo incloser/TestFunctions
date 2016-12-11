@@ -30,7 +30,7 @@ public abstract class HelperAPI {
     public void getScreenshot() {
         File screenshot = ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(screenshot, new File("F:\\screenshots\\1.jpg"));
+            FileUtils.copyFile(screenshot, new File("D:\\screenshots\\1.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }

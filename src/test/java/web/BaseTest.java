@@ -37,7 +37,6 @@ class BaseTest extends HelperAPI {
      */
     @Before
     public void setUp() {
-        System.setProperty("webdriver.gecko.driver", "F:\\Distr\\geckodriver.exe");
         driver = new FirefoxDriver();
         driver.manage().timeouts().pageLoadTimeout(3, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
