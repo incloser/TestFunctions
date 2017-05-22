@@ -1,4 +1,4 @@
-package baseHelpers;
+package basehelpers;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;

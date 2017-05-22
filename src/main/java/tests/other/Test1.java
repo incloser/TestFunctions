@@ -1,7 +1,8 @@
-package other;
+package tests.other;
 
+
+import basehelpers.TestMethods;
 import org.junit.*;
-import baseHelpers.TestMethods;
 
 import static org.junit.Assert.assertEquals;
 

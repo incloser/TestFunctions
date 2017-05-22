@@ -1,6 +1,6 @@
-package web;
+package tests.web;
 
-import baseHelpers.HelperAPI;
+import basehelpers.HelperAPI;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package other;
+package tests.other;
 
 /**
  * Created by wildcard on 18.05.2017.

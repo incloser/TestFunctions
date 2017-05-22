@@ -1,8 +1,8 @@
-package web;
+package tests.web;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
-import baseHelpers.GooglePage;
+import basehelpers.GooglePage;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;

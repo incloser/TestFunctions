@@ -1,4 +1,4 @@
-package baseHelpers;
+package basehelpers;
 
 public class TestMethods {
 
